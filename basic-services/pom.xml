@@ -9,11 +9,11 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<!--<module>basic-config</module>-->
+		<module>basic-config</module>
 		<module>basic-discovery</module>
-		<!--<module>basic-ui</module>-->
+		<module>ui</module>
 		<module>person</module>
-		<!--<module>basic-some</module>-->
+		<module>some</module>
 		<!--<module>basic-monitor</module>-->
 	</modules>
 	<name>basic-services</name>
