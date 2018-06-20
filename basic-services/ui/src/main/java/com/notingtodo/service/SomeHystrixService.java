@@ -19,7 +19,7 @@ public class SomeHystrixService {
     //2 使用 @HystrixCommand 的 fallbackMethod 参数指定当本方法调用失败时调用后备方法 fallbackSome
     @HystrixCommand(fallbackMethod = "fallbackSome")
     public String getSome(){
-        return restTemplate.getForObject("http://localhost:8083/getsome",String.class);
+        return restTemplate.getForObject("http://some/getsome",String.class);
     }
 
     public String fallbackSome(){

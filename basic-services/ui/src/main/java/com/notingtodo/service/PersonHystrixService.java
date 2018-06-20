@@ -20,14 +20,12 @@ public class PersonHystrixService {
 
     //1 使用@HystrixCommand的fallbackMethod参数指定，当本方法调用失败时，调用后背方法fallbackMethod。
     @HystrixCommand(fallbackMethod = "fallbackSave")
-    public List<Person> save(String name){
-        return personService.save(name);
+    public Person save(){
+        return personService.save();
     }
 
-    public List<Person> fallbackSave(String name){
-        List<Person> list = new ArrayList<>();
-        Person p = new Person(name+"没有保存成功，Person Service 故障");
-        list.add(p);
-        return list;
+    public Person fallbackSave(){
+        Person p = new Person("没有保存成功，Person Service 故障");
+        return p;
     }
 }

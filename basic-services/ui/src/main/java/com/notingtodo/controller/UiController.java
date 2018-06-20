@@ -25,11 +25,11 @@ public class UiController {
     private PersonHystrixService personHystrixService;
 
     @RequestMapping("/dispatch")
-    public List<Person> sendMessage(@RequestBody String personName){
-        return personHystrixService.save(personName);
+    public Person sendMessage(){
+        return personHystrixService.save();
     }
 
-    @RequestMapping(value = "/getsome", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/getsome", produces = {MediaType.TEXT_PLAIN_VALUE})
     public String getSome(){
         return someHystrixService.getSome();
     }

@@ -6,4 +6,5 @@ eureka:
   client:
     register-with-eureka: false #3 当前服务部需要到Eureka Server上注册
     fetch-registry: false
-
+  server:
+    enable-self-preservation: false # 本地进行开发时，由于服务频繁重启，可以关闭保护机制，以确保注册中心可以 将不可用的实例正确剔除

@@ -5,9 +5,13 @@ package com.notingtodo.domain;
  */
 public class Person {
 
-    private Long id;
+    private String  id;
 
     private String name;
+
+    private Integer age;
+
+    private String address;
 
     public Person() {
         super();
@@ -18,11 +22,11 @@ public class Person {
         this.name = name;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -32,5 +36,21 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

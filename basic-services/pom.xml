@@ -14,7 +14,7 @@
 		<module>ui</module>
 		<module>person</module>
 		<module>some</module>
-		<!--<module>basic-monitor</module>-->
+		<module>monitor</module>
 	</modules>
 	<name>basic-services</name>
 	<description>NotingToDo project for Spring Cloud</description>
