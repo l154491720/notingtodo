@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: basic-auth
+
+  jpa:
+    open-in-view: true
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://192.168.59.103:3306/ntd_mysql?autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 192.168.59.103
+server:
+  port: 9999
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: debug
+#logging:
+#  level:
+#    org:
+#      springframework: debug
+
+
+#security:
+#  oauth2:
+#    resource:
+#      filter-order: 3 #Security filter chain的order
