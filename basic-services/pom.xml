@@ -8,24 +8,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<modules>
-		<module>basic-config</module>
-		<module>basic-discovery</module>
-		<module>ui</module>
-		<module>person</module>
-		<module>some</module>
-		<module>monitor</module>
-	</modules>
-	<name>basic-services</name>
-	<description>NotingToDo project for Spring Cloud</description>
-
-	<!--<parent>-->
-		<!--<groupId>org.springframework.boot</groupId>-->
-		<!--<artifactId>spring-boot-starter-parent</artifactId>-->
-		<!--<version>${spring-boot.version}</version>-->
-		<!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-	<!--</parent>-->
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -37,29 +19,39 @@
 		<spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 
 		<!-- spring cloud版本 -->
-		<spring-cloud.version>Angel.SR5</spring-cloud.version>
+		<spring-cloud.version>Dalston.SR5</spring-cloud.version>
 		<spring-cloud-sleuth.version>1.2.1.RELEASE</spring-cloud-sleuth.version>
 		<spring-cloud-netflix.version>1.4.0.RELEASE</spring-cloud-netflix.version>
 	</properties>
 
+	<modules>
+		<!-- 基础配置服务  -->
+		<module>basic-config</module>
+		<!-- 注册中心服务  -->
+		<module>basic-discovery</module>
+		<!--<module>ui</module>-->
+		<!--<module>person</module>-->
+		<!--<module>some</module>-->
+		<!--<module>monitor</module>-->
+		<!-- 链路追踪服务  -->
+		<module>basic-zipkin</module>
+		<!-- 基础网关服务  -->
+		<module>basic-gateway</module>
+	</modules>
+	<name>basic-services</name>
+	<description>NotingToDo project for Spring Cloud</description>
+
+	<!-- 父项目pom文件添加父依赖，直接用properties节点中的变量不会生效，目前不知道什么原因 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+
+
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-parent</artifactId>
-			<version>${spring-boot.version}</version>
-			<type>pom</type>
-			<scope>import</scope>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-dependencies</artifactId>
-			<version>${spring-cloud.version}</version>
-			<type>pom</type>
-			<scope>import</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -72,6 +64,19 @@
 			<version>4.5.3</version>
 		</dependency>
 	</dependencies>
+
+	<!-- 这个地方做修改，添加依赖管理节点，这样子pom文件就不会出现jar包冲突了 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
