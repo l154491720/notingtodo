@@ -33,10 +33,14 @@
 		<!--<module>person</module>-->
 		<!--<module>some</module>-->
 		<!--<module>monitor</module>-->
+		<!-- 授权服务  -->
+		<module>basic-auth</module>
 		<!-- 链路追踪服务  -->
 		<module>basic-zipkin</module>
 		<!-- 基础网关服务  -->
 		<module>basic-gateway</module>
+		<!-- 基础公用组件 -->
+		<!--<module>basic-common</module>-->
 	</modules>
 	<name>basic-services</name>
 	<description>NotingToDo project for Spring Cloud</description>

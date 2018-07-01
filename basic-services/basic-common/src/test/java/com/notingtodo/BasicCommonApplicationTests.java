@@ -7,7 +7,7 @@ package com.notingtodo;
 //
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
-//public class BasicAuthApplicationTests {
+//public class BasicCommonApplicationTests {
 //
 //	@Test
 //	public void contextLoads() {

@@ -11,8 +11,8 @@ import java.security.Principal;
 @RestController
 public class UserController {
 
-    @GetMapping("/user")
-    public Principal user(Principal user){
-        return user;
-    }
+//    @GetMapping("/user")
+//    public Principal user(Principal user){
+//        return user;
+//    }
 }
