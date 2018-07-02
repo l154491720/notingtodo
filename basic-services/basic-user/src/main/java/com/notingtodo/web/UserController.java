@@ -58,6 +58,9 @@ public class UserController {
         return userService.login(username,password);
     }
 
+    /**
+
+     */
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")
     @PostMapping("/{username}")
     @SysLogger("getUserInfo")

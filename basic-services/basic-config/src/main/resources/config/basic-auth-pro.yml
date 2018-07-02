@@ -1,0 +1,41 @@
+spring:
+  jpa:
+    open-in-view: true
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://192.168.59.103:3306/sys-user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 9999  #程序端口号
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3 #在 Spring Boot 1.5.x版本这时固定写法，Spring Boot 1.5.x版本之前，默认即可
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: debug
+#logging:
+#  level:
+#    org:
+#      springframework: debug
+
+
+#security:
+#  oauth2:
+#    resource:
+#      filter-order: 3 #Security filter chain的order

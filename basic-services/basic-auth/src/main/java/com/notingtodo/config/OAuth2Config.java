@@ -16,11 +16,35 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
 
 /**
+ * OAuth2 Provider 负责公开被 OAuth2 保护起来的资源。 OAuth2 Provider 需要配置代表用户的OAuth2 客户端信息，
+ * 被用户允许的客户端就可以访问被 OAuth2 保护的资源。OAuth2 Provider 通过管理验证 OAuth2 令牌来控制客户端是否
+ * 有权限访问其被保护的资源
+ *
+ * OAuth2 还必须提供认证 API 接口，根据认证 API接口，用户提供账号和密码等信息，来确认客户端是否可被 OAuth2 Provider
+ * 授权。这样做的好处就是第三方客户端不需要获取用户的账号和密码，通过授权方式就可以访问被 OAuth2保护起来的资源了.
+ *
+ * OAuth2 Provider 的角色被分为 Authorization Service(授权服务) 和 Resource Service(资源服务)。 Spring OAuth2需要配合
+ * Spring Security 一起使用，所有请求由 Spring MVC 控制器处理，并且经过一系列Spring Security过滤器。
+ *
+ * 在 Spring Security 过滤器链中有以下两个节点，这两个节点是向 Authorization Service 获取验证和授权的。
+ * 1.授权点: /oauth/authorize.
+ * 2.获取Token节点: 默认为/oauth/token.
  * Created by qilin.liu on 2018/6/30.
  */
 @Configuration
 @EnableAuthorizationServer //开启Authorization Server的功能，并且以Bean的形式注入ioc容器, 需要类继承AuthorizationServerConfigurerAdapter
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
+
+    /**
+     * Authorization Server 配置
+     * 在配置 Authorization Server 时，需要考虑客户端(Client)从用户获取访问令牌的授权类型(例如授权代码、用户凭据、刷新令牌)。
+     * Authorization Server 需要配置客户端的详细信息和令牌服务的实现。
+     *
+     * 开启Authorization Server的功能，需要实现以下3个配置
+     * 1.ClientDetailsServiceConfigurer 配置客户端信息
+     * 2.AuthorizationServerEndpointsConfigurer 配置授权Token节点和Token服务
+     * 3.AuthorizationServerSecurityConfigurer 配置 Token 节点的安全策略
+     */
     /*
     ClientDetailsServiceConfigurer：
     配置客户端信息，客户端的配置信息可以放在内存中，也可以放在数据库中
@@ -95,4 +119,12 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
         converter.setKeyPair(keyStoreKeyFactory.getKeyPair("notingtodo-jwt"));
         return converter;
     }
+
+    /*
+    AuthorizationServerSecurityConfigurer:
+    如果资源服务和授权服务是在同一个服务中，用默认的配置即可，不需要做其他任何的配置。但是如果资源服务
+    和授权服务不在同一个服务中，则需要做一些额外配置。如采用 RemoteTokenServices (远程Token校验)，资源
+    服务器的每次请求所携带的 Token 都需要从授权服务做校验。 这时需要配置"/oauth/check_token" 校验节点
+    的校验策略
+     */
 }

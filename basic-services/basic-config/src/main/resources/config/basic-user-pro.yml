@@ -1,5 +1,13 @@
 server:
   port: 8762
+eureka:
+  instance:
+    non-secure-port: ${server.port:8762} #3 非SSL端口，若环境变量中server.port有值，则使用环境变量值，没有则使用8080
+    metadata-map:
+      insta: ${spring.application.name}:${random.value} #4 配置在Eureka Server的实例ID
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/ #5 Eureka客户端设置Eureka Server的地址
 
 spring:
   datasource:
@@ -11,6 +19,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  zipkin:
+    base-url: http://${basic-zipkin.host:localhost}:${localhost.port:9411} #设置 Zipkin 服务的地址
+#    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      percentage: 1.0 # 100%的概率将链路上的数据上传给Zipkin Server, 在默认情况下，该值为 0.1 ，开发调试期间设置为收集全部跟踪信息
 
   rabbitmq:
     host: 192.168.59.103

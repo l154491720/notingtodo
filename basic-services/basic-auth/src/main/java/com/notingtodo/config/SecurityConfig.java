@@ -72,4 +72,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     public AuthenticationManager authenticationManagerBean()throws Exception{
         return super.authenticationManagerBean();
     }
+
+    /**
+     * Spring Security 总结
+     * 1. 首先需要引入 Spring Security 相关依赖
+     * 2. 写一个配置类，该类需要继承 WebSecurityConfigurerAdapter , 并在该配置类上加 @EnableWebSecurity 注解开启
+     *      Web Security。
+     *      再需配置 AuthenticationManagerBuilder,  AuthenticationManagerBuilder 配置读取用户认证信息
+     *      的方式，可以从内存中读取，也可以从数据库中读取，或者用其他方式。
+     *      其次，需配置HttpSecurity, HttpSecurity 配置了请求的认证规则，即哪些 URI 请求需要认证、那些不要，以及
+     *      需要什么权限才能访问。
+     *      最后，如果需要开启方法级别上的安全配置，需要通过配置类上加 @EnableGlobalMethodSecurity 注解开启
+     *      方法级别上的安全控制支持 secureEnabled、jsr250Enabled、和PostAuthorize 两种形式，一般只用到
+     *      PreAuthorize 这种方式
+     *
+     */
 }

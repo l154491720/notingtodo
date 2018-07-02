@@ -9,3 +9,10 @@ spring:
           service-id: BASIC-CONFIG   #调用配置服务的配置
   profiles:
    active: pro #不同环境下的参数切换配置
+
+  zipkin:
+    base-url: http://${basic-zipkin.host:localhost}:${localhost.port:9411} #设置 Zipkin 服务的地址
+  #    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      percentage: 1.0 # 100%的概率将链路上的数据上传给Zipkin Server, 在默认情况下，该值为 0.1

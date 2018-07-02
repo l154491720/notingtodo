@@ -30,6 +30,12 @@
 			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
 
+		<!-- zipkin-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
+
 		<!-- 配置-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
