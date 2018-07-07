@@ -4831,3 +4831,852 @@ java.io.IOException: 你的主机中的软件中止了一个已建立的连接�
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
 
 2018-07-01 22:26:21.554  INFO 6376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-07-07 12:32:09.135  INFO 7936 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 12:32:09.608  INFO 7936 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 12:32:09.609  INFO 7936 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 12:32:09.743  INFO 7936 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 12:32:09.761  INFO 7936 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1813f3e9: startup date [Sat Jul 07 12:32:09 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2eea88a1
+2018-07-07 12:32:10.362  WARN 7936 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+2018-07-07 12:32:10.365 ERROR 7936 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1813f3e9: startup date [Sat Jul 07 12:32:09 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2eea88a1
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:17) [classes/:na]
+
+2018-07-07 12:32:10.371  INFO 7936 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-07-07 12:32:10.375 ERROR 7936 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:556) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:17) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[na:1.8.0_161]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362) ~[na:1.8.0_161]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	at de.codecentric.boot.admin.config.AdminServerImportSelector.selectImports(AdminServerImportSelector.java:31) ~[spring-boot-admin-server-1.5.1.jar:1.5.1]
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:547) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.netflix.zuul.ZuulConfiguration
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	... 28 common frames omitted
+
+2018-07-07 12:36:22.342  INFO 8956 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 12:36:22.640  INFO 8956 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 12:36:22.640  INFO 8956 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 12:36:22.717  INFO 8956 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 12:36:22.732  INFO 8956 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@599f571f: startup date [Sat Jul 07 12:36:22 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2eea88a1
+2018-07-07 12:36:23.420  WARN 8956 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+2018-07-07 12:36:23.423 ERROR 8956 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@599f571f: startup date [Sat Jul 07 12:36:22 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2eea88a1
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:17) [classes/:na]
+
+2018-07-07 12:36:23.430  INFO 8956 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-07-07 12:36:23.435 ERROR 8956 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:556) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:17) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[na:1.8.0_161]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362) ~[na:1.8.0_161]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	at de.codecentric.boot.admin.config.AdminServerImportSelector.selectImports(AdminServerImportSelector.java:31) ~[spring-boot-admin-server-1.5.1.jar:1.5.1]
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:547) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.netflix.zuul.ZuulConfiguration
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	... 28 common frames omitted
+
+2018-07-07 13:08:12.235  INFO 2556 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 13:08:12.577  INFO 2556 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 13:08:12.578  INFO 2556 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 13:08:12.631  INFO 2556 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 13:08:12.652  INFO 2556 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78e89bfe: startup date [Sat Jul 07 13:08:12 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@420a85c4
+2018-07-07 13:08:13.458  WARN 2556 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+2018-07-07 13:08:13.462 ERROR 2556 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78e89bfe: startup date [Sat Jul 07 13:08:12 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@420a85c4
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:17) [classes/:na]
+
+2018-07-07 13:08:13.472  INFO 2556 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-07-07 13:08:13.478 ERROR 2556 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:556) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:17) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[na:1.8.0_161]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362) ~[na:1.8.0_161]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	at de.codecentric.boot.admin.config.AdminServerImportSelector.selectImports(AdminServerImportSelector.java:31) ~[spring-boot-admin-server-1.5.1.jar:1.5.1]
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:547) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.netflix.zuul.ZuulConfiguration
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	... 28 common frames omitted
+
+2018-07-07 13:09:15.240  INFO 2324 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 13:09:15.831  INFO 2324 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 13:09:15.831  INFO 2324 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 13:09:15.873  INFO 2324 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 13:09:15.892  INFO 2324 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@773c0293: startup date [Sat Jul 07 13:09:15 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c
+2018-07-07 13:09:16.510  WARN 2324 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+2018-07-07 13:09:16.513 ERROR 2324 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@773c0293: startup date [Sat Jul 07 13:09:15 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:21) [classes/:na]
+
+2018-07-07 13:09:16.519  INFO 2324 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-07-07 13:09:16.525 ERROR 2324 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:556) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:21) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[na:1.8.0_161]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362) ~[na:1.8.0_161]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	at de.codecentric.boot.admin.config.AdminServerImportSelector.selectImports(AdminServerImportSelector.java:31) ~[spring-boot-admin-server-1.5.1.jar:1.5.1]
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:547) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.netflix.zuul.ZuulConfiguration
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	... 28 common frames omitted
+
+2018-07-07 13:13:06.852  INFO 4440 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 13:13:07.150  INFO 4440 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 13:13:07.150  INFO 4440 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 13:13:07.192  INFO 4440 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 13:13:07.217  INFO 4440 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7aad3f7d: startup date [Sat Jul 07 13:13:07 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c
+2018-07-07 13:13:08.057  WARN 4440 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+2018-07-07 13:13:08.061 ERROR 4440 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7aad3f7d: startup date [Sat Jul 07 13:13:07 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:414) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:556) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:20) [classes/:na]
+
+2018-07-07 13:13:08.069  INFO 4440 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-07-07 13:13:08.097 ERROR 4440 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.notingtodo.BasicAdminApplication]; nested exception is java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:556) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:308) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:270) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.4.RELEASE.jar:1.5.4.RELEASE]
+	at com.notingtodo.BasicAdminApplication.main(BasicAdminApplication.java:20) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/cloud/netflix/zuul/ZuulConfiguration
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[na:1.8.0_161]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368) ~[na:1.8.0_161]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362) ~[na:1.8.0_161]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_161]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	at de.codecentric.boot.admin.config.AdminServerImportSelector.selectImports(AdminServerImportSelector.java:31) ~[spring-boot-admin-server-1.5.1.jar:1.5.1]
+	at org.springframework.context.annotation.ConfigurationClassParser.processDeferredImportSelectors(ConfigurationClassParser.java:547) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 14 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.netflix.zuul.ZuulConfiguration
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_161]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338) ~[na:1.8.0_161]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_161]
+	... 28 common frames omitted
+
+2018-07-07 14:02:03.018  INFO 8140 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:02:03.309  INFO 8140 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:02:03.309  INFO 8140 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 14:02:03.351  INFO 8140 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 14:02:03.374  INFO 8140 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bdc8014: startup date [Sat Jul 07 14:02:03 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c
+2018-07-07 14:02:04.406  INFO 8140 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'counterFactory' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration$ZuulMetricsConfiguration; factoryMethodName=counterFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration$ZuulMetricsConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration$ZuulCounterFactoryConfiguration; factoryMethodName=counterFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration$ZuulCounterFactoryConfiguration.class]]
+2018-07-07 14:02:04.436  INFO 8140 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'zuulController' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration; factoryMethodName=zuulController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration; factoryMethodName=zuulController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/config/RevereseZuulProxyConfiguration.class]]
+2018-07-07 14:02:04.437  INFO 8140 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'zuulRefreshRoutesListener' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration; factoryMethodName=zuulRefreshRoutesListener; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration; factoryMethodName=zuulRefreshRoutesListener; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/config/RevereseZuulProxyConfiguration.class]]
+2018-07-07 14:02:04.731  INFO 8140 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=186dd398-8fd5-33bc-b274-675d0e310c25
+2018-07-07 14:02:04.750  INFO 8140 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-07-07 14:02:04.936  INFO 8140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$6f8fc017] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-07 14:02:05.198  INFO 8140 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$597d1cd3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-07 14:02:06.261  INFO 8140 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 5000 (http)
+2018-07-07 14:02:06.285  INFO 8140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-07-07 14:02:06.287  INFO 8140 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-07-07 14:02:06.441  INFO 8140 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-07-07 14:02:06.441  INFO 8140 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3067 ms
+2018-07-07 14:02:06.939  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2018-07-07 14:02:06.940  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-07 14:02:06.941  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-07 14:02:06.941  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-07 14:02:06.941  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-07 14:02:06.942  INFO 8140 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-07-07 14:02:06.942  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2018-07-07 14:02:06.942  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018-07-07 14:02:06.943  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'proxyStreamServlet' to [/proxy.stream]
+2018-07-07 14:02:06.945  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'turbineStreamServlet' to [/turbine.stream]
+2018-07-07 14:02:06.945  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-07-07 14:02:06.946  INFO 8140 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'zuulServlet' to [/zuul/*]
+2018-07-07 14:02:07.102  INFO 8140 --- [main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bdc8014: startup date [Sat Jul 07 14:02:03 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c] and template loader path [classpath:/templates/]
+2018-07-07 14:02:07.104  INFO 8140 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-07-07 14:02:07.292  WARN 8140 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-07-07 14:02:07.292  INFO 8140 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-07-07 14:02:07.300  INFO 8140 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@696174d3
+2018-07-07 14:02:08.213  WARN 8140 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-07-07 14:02:08.214  INFO 8140 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-07-07 14:02:08.452  INFO 8140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: No access restrictor found, access to any MBean is allowed
+2018-07-07 14:02:09.015  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bdc8014: startup date [Sat Jul 07 14:02:03 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1cf56a1c
+2018-07-07 14:02:09.263  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hystrix/{path}]}" onto public java.lang.String org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardController.monitor(java.lang.String,org.springframework.ui.Model,org.springframework.web.context.request.WebRequest)
+2018-07-07 14:02:09.265  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hystrix]}" onto public java.lang.String org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardController.home(org.springframework.ui.Model,org.springframework.web.context.request.WebRequest)
+2018-07-07 14:02:09.267  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-07 14:02:09.268  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-07 14:02:09.271  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/turbine/clusters],methods=[GET]}" onto public java.util.Map<java.lang.String, ?> spring.boot.admin.turbine.web.TurbineController.getClusters()
+2018-07-07 14:02:09.274  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.get(java.lang.String)
+2018-07-07 14:02:09.274  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications],methods=[POST]}" onto public org.springframework.http.ResponseEntity<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.register(de.codecentric.boot.admin.model.Application)
+2018-07-07 14:02:09.274  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.unregister(java.lang.String)
+2018-07-07 14:02:09.274  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications],methods=[GET]}" onto public java.util.Collection<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.applications(java.lang.String)
+2018-07-07 14:02:09.277  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/journal],produces=[application/json]}" onto public java.util.Collection<de.codecentric.boot.admin.event.ClientApplicationEvent> de.codecentric.boot.admin.journal.web.JournalController.getJournal()
+2018-07-07 14:02:09.278  INFO 8140 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/journal],produces=[text/event-stream]}" onto public org.springframework.web.servlet.mvc.method.annotation.SseEmitter de.codecentric.boot.admin.journal.web.JournalController.getJournalEvents()
+2018-07-07 14:02:09.330  INFO 8140 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-07-07 14:02:09.357  WARN 8140 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2018-07-07 14:02:09.357  WARN 8140 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2018-07-07 14:02:09.359  INFO 8140 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:02:09.359  INFO 8140 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:02:09.359  INFO 8140 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/all-modules.css] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:02:09.359  INFO 8140 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/all-modules.js] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:02:09.423  INFO 8140 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:02:10.115  INFO 8140 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 00b2b88c-b826-48e8-9c0a-0f4ca1dfd7cb
+
+2018-07-07 14:02:10.209  INFO 8140 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2018-07-07 14:02:10.209  INFO 8140 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@2ba0b95f, []
+2018-07-07 14:02:10.335  INFO 8140 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2748bd6c, org.springframework.security.web.context.SecurityContextPersistenceFilter@251e2f4a, org.springframework.security.web.header.HeaderWriterFilter@62525dd3, org.springframework.security.web.authentication.logout.LogoutFilter@633cad4d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1ce8084a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a1f22f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@573f2e67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64a4739, org.springframework.security.web.session.SessionManagementFilter@23ee92df, org.springframework.security.web.access.ExceptionTranslationFilter@3085befb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49770ef9]
+2018-07-07 14:02:11.656  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.666  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-07-07 14:02:11.666  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.669  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-07-07 14:02:11.669  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.670  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/jolokia/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-07-07 14:02:11.672  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2018-07-07 14:02:11.672  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2018-07-07 14:02:11.673  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-07-07 14:02:11.674  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-07-07 14:02:11.674  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.674  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.675  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-07-07 14:02:11.675  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/routes || /routes.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.675  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-07-07 14:02:11.676  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2018-07-07 14:02:11.676  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-07-07 14:02:11.677  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-07-07 14:02:11.678  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.678  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.679  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.679  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+2018-07-07 14:02:11.679  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+2018-07-07 14:02:11.680  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.680  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2018-07-07 14:02:11.682  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-07-07 14:02:11.682  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-07-07 14:02:11.684  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.684  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.684  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:02:11.685  INFO 8140 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-07-07 14:02:17.903  INFO 8140 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2018-07-07 14:02:17.968  INFO 8140 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'updateTaskScheduler'
+2018-07-07 14:02:18.013  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/turbine/clusters],methods=[GET]}" onto public java.util.Map<java.lang.String, ?> spring.boot.admin.turbine.web.TurbineController.getClusters()
+2018-07-07 14:02:18.014  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.get(java.lang.String)
+2018-07-07 14:02:18.014  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications],methods=[POST]}" onto public org.springframework.http.ResponseEntity<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.register(de.codecentric.boot.admin.model.Application)
+2018-07-07 14:02:18.014  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.unregister(java.lang.String)
+2018-07-07 14:02:18.014  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications],methods=[GET]}" onto public java.util.Collection<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.applications(java.lang.String)
+2018-07-07 14:02:18.015  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/journal],produces=[application/json]}" onto public java.util.Collection<de.codecentric.boot.admin.event.ClientApplicationEvent> de.codecentric.boot.admin.journal.web.JournalController.getJournal()
+2018-07-07 14:02:18.015  INFO 8140 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/journal],produces=[text/event-stream]}" onto public org.springframework.web.servlet.mvc.method.annotation.SseEmitter de.codecentric.boot.admin.journal.web.JournalController.getJournalEvents()
+2018-07-07 14:02:18.183  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-07-07 14:02:18.195  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-07-07 14:02:18.196  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-07-07 14:02:18.197  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:02:18.197  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:02:18.198  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:02:18.198  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'zuulEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:02:18.199  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-07-07 14:02:18.202  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-07-07 14:02:18.241  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2018-07-07 14:02:18.257  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+2018-07-07 14:02:18.263  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-07-07 14:02:18.273  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'zuulEndpoint': registering with JMX server as MBean [org.springframework.cloud.netflix.zuul:name=zuulEndpoint,type=RoutesEndpoint]
+2018-07-07 14:02:18.274  WARN 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with key 'zuulEndpoint' has been registered as an MBean but has no exposed attributes or operations
+2018-07-07 14:02:18.276  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=bdc8014,type=ConfigurationPropertiesRebinder]
+2018-07-07 14:02:18.280  INFO 8140 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2018-07-07 14:02:18.470  INFO 8140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: No access restrictor found, access to any MBean is allowed
+2018-07-07 14:02:18.476  INFO 8140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: jolokia:type=Config is already registered. Adding it with jolokia:type=Config,uuid=ee7c4bd1-f881-4f8d-b2f0-b7bf114ec293, but you should revise your setup in order to either use a qualifier or ensure, that only a single agent gets registered (otherwise history functionality might not work)
+2018-07-07 14:02:18.476  INFO 8140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: Cannot register (legacy) MBean handler for config store with name jmx4perl:type=Config since it already exists. This is the case if another agent has been already started within the same JVM. The registration is skipped.
+2018-07-07 14:02:18.477  INFO 8140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: Jolokia Discovery MBean registration is skipped because there is already one registered.
+2018-07-07 14:02:18.531  INFO 8140 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-07-07 14:02:18.584  INFO 8140 --- [main] o.s.c.n.turbine.SpringAggregatorFactory  : Could not find monitors: []
+2018-07-07 14:02:18.841  INFO 8140 --- [main] c.n.t.monitor.cluster.ClusterMonitor     : Registering event handler for cluster monitor: StaticListener_For_Aggregator
+2018-07-07 14:02:18.845  INFO 8140 --- [main] c.n.t.handler.TurbineDataDispatcher      : 
+
+Just added and starting handler tuple: StaticListener_For_Aggregator
+2018-07-07 14:02:18.845  INFO 8140 --- [main] c.n.t.monitor.cluster.ClusterMonitor     : All event handlers for cluster monitor: [StaticListener_For_Aggregator]
+2018-07-07 14:02:18.845  INFO 8140 --- [main] c.n.t.monitor.cluster.ClusterMonitor     : Starting up the cluster monitor for default_agg
+2018-07-07 14:02:18.850  INFO 8140 --- [main] c.n.t.discovery.InstanceObservable       : Starting InstanceObservable at frequency: 60000 millis
+2018-07-07 14:02:18.853  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:02:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:02:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:02:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:02:18.860  INFO 8140 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-07-07 14:02:18.962  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-07-07 14:02:19.118  INFO 8140 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-07-07 14:02:19.118  INFO 8140 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-07-07 14:02:20.070  INFO 8140 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-07-07 14:02:20.070  INFO 8140 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-07-07 14:02:20.615  INFO 8140 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-07-07 14:02:20.800  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-07-07 14:02:20.801  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-07-07 14:02:20.801  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-07-07 14:02:20.801  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-07-07 14:02:20.801  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-07-07 14:02:20.801  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-07-07 14:02:20.801  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-07-07 14:02:20.930  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-07-07 14:02:20.931  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-07-07 14:02:20.934  INFO 8140 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-07-07 14:02:20.936  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1530943340936 with initial instances count: 1
+2018-07-07 14:02:21.000  INFO 8140 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-admin with eureka with status UP
+2018-07-07 14:02:21.001  INFO 8140 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1530943341001, current=UP, previous=STARTING]
+2018-07-07 14:02:21.007  INFO 8140 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-ADMIN/OFPJZCBUT4SLVN7:service-admin:5000: registering service...
+2018-07-07 14:02:21.020  INFO 8140 --- [main] d.c.b.a.registry.ApplicationRegistry     : New Application Application [id=38f3fe26, name=BASIC-CONFIG, managementUrl=http://OFPJZCBUT4SLVN7:8888, healthUrl=http://OFPJZCBUT4SLVN7:8888/health, serviceUrl=http://OFPJZCBUT4SLVN7:8888] registered 
+2018-07-07 14:02:21.086  INFO 8140 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-07-07 14:02:21.107  INFO 8140 --- [main] ration$HystrixMetricsPollerConfiguration : Starting poller
+2018-07-07 14:02:21.109  INFO 8140 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-ADMIN/OFPJZCBUT4SLVN7:service-admin:5000 - registration status: 204
+2018-07-07 14:02:21.268  INFO 8140 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 5000 (http)
+2018-07-07 14:02:21.269  INFO 8140 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5000
+2018-07-07 14:02:21.274  INFO 8140 --- [main] com.notingtodo.BasicAdminApplication     : Started BasicAdminApplication in 20.363 seconds (JVM running for 20.782)
+2018-07-07 14:02:50.948  INFO 8140 --- [DiscoveryClient-CacheRefreshExecutor-0] d.c.b.a.registry.ApplicationRegistry     : New Application Application [id=e0f04612, name=SERVICE-ADMIN, managementUrl=http://OFPJZCBUT4SLVN7:5000, healthUrl=http://OFPJZCBUT4SLVN7:5000/health, serviceUrl=http://OFPJZCBUT4SLVN7:5000] registered 
+2018-07-07 14:02:51.090  INFO 8140 --- [http-nio-5000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-07 14:02:51.091  INFO 8140 --- [http-nio-5000-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-07 14:02:51.118  INFO 8140 --- [http-nio-5000-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/turbine/stream/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/health/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/env/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/metrics/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/dump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/jolokia/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/info/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/configprops/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/trace/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/logfile/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/refresh/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/flyway/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.139  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/liquibase/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/heapdump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/loggers/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/auditevents/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/hystrix.stream/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/health/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/env/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/metrics/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.140  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/dump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/jolokia/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/info/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/configprops/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/trace/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/logfile/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/refresh/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/flyway/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/liquibase/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/heapdump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/loggers/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/auditevents/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.141  INFO 8140 --- [http-nio-5000-exec-2] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/hystrix.stream/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:02:51.166  INFO 8140 --- [http-nio-5000-exec-2] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:02:51.371  INFO 8140 --- [http-nio-5000-exec-2] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:03:18.854  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:03:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:03:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:03:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:04:18.854  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:04:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:04:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:04:18.854  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:05:18.855  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:05:18.855  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:05:18.855  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:05:18.855  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:06:18.855  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:06:18.855  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:06:18.855  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:06:18.855  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:07:18.856  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:07:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:07:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:07:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:07:20.810  INFO 8140 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-07-07 14:07:51.286  INFO 8140 --- [http-nio-5000-exec-10] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:07:51.468  INFO 8140 --- [http-nio-5000-exec-10] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:08:18.856  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:08:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:08:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:08:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:09:18.856  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:09:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:09:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:09:18.856  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:10:18.857  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:10:18.857  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:10:18.857  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:10:18.857  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:11:18.857  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:11:18.857  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:11:18.857  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:11:18.857  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:12:18.858  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:12:18.858  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:12:18.858  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:12:18.858  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:12:20.817  INFO 8140 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-07-07 14:12:51.293  INFO 8140 --- [http-nio-5000-exec-3] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:12:51.479  INFO 8140 --- [http-nio-5000-exec-3] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:13:18.858  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:13:18.858  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:13:18.858  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:13:18.858  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:14:18.859  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:14:18.859  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:14:18.859  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:14:18.859  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:15:18.859  INFO 8140 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:15:18.859  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:15:18.860  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:15:18.860  INFO 8140 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:15:47.056  INFO 7216 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:15:47.386  INFO 7216 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:15:47.386  INFO 7216 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[]]
+2018-07-07 14:15:47.426  INFO 7216 --- [main] com.notingtodo.BasicAdminApplication     : No active profile set, falling back to default profiles: default
+2018-07-07 14:15:47.448  INFO 7216 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6579c3d9: startup date [Sat Jul 07 14:15:47 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7de62196
+2018-07-07 14:15:48.482  INFO 7216 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'counterFactory' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration$ZuulMetricsConfiguration; factoryMethodName=counterFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration$ZuulMetricsConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration$ZuulCounterFactoryConfiguration; factoryMethodName=counterFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration$ZuulCounterFactoryConfiguration.class]]
+2018-07-07 14:15:48.507  INFO 7216 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'zuulController' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration; factoryMethodName=zuulController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration; factoryMethodName=zuulController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/config/RevereseZuulProxyConfiguration.class]]
+2018-07-07 14:15:48.509  INFO 7216 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'zuulRefreshRoutesListener' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration; factoryMethodName=zuulRefreshRoutesListener; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration; factoryMethodName=zuulRefreshRoutesListener; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [de/codecentric/boot/admin/config/RevereseZuulProxyConfiguration.class]]
+2018-07-07 14:15:48.804  INFO 7216 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=90d9a1a9-9186-348e-b96b-09a20f138598
+2018-07-07 14:15:48.824  INFO 7216 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-07-07 14:15:48.975  INFO 7216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$20c6cdb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-07 14:15:49.151  INFO 7216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ab42a6e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-07 14:15:49.684  INFO 7216 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 5000 (http)
+2018-07-07 14:15:49.695  INFO 7216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-07-07 14:15:49.696  INFO 7216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-07-07 14:15:49.827  INFO 7216 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-07-07 14:15:49.827  INFO 7216 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2379 ms
+2018-07-07 14:15:50.378  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2018-07-07 14:15:50.379  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-07 14:15:50.379  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-07 14:15:50.379  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-07 14:15:50.379  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-07 14:15:50.380  INFO 7216 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-07-07 14:15:50.380  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2018-07-07 14:15:50.380  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018-07-07 14:15:50.381  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'proxyStreamServlet' to [/proxy.stream]
+2018-07-07 14:15:50.386  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'turbineStreamServlet' to [/turbine.stream]
+2018-07-07 14:15:50.387  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-07-07 14:15:50.387  INFO 7216 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'zuulServlet' to [/zuul/*]
+2018-07-07 14:15:50.787  INFO 7216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: No access restrictor found, access to any MBean is allowed
+2018-07-07 14:15:51.124  INFO 7216 --- [main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6579c3d9: startup date [Sat Jul 07 14:15:47 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7de62196] and template loader path [classpath:/templates/]
+2018-07-07 14:15:51.125  INFO 7216 --- [main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-07-07 14:15:51.280  WARN 7216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-07-07 14:15:51.280  INFO 7216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-07-07 14:15:51.287  INFO 7216 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@324e8baa
+2018-07-07 14:15:51.931  WARN 7216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-07-07 14:15:51.931  INFO 7216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-07-07 14:15:52.204  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6579c3d9: startup date [Sat Jul 07 14:15:47 GMT+08:00 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7de62196
+2018-07-07 14:15:52.343  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hystrix]}" onto public java.lang.String org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardController.home(org.springframework.ui.Model,org.springframework.web.context.request.WebRequest)
+2018-07-07 14:15:52.344  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hystrix/{path}]}" onto public java.lang.String org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardController.monitor(java.lang.String,org.springframework.ui.Model,org.springframework.web.context.request.WebRequest)
+2018-07-07 14:15:52.347  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-07 14:15:52.347  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-07 14:15:52.351  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/turbine/clusters],methods=[GET]}" onto public java.util.Map<java.lang.String, ?> spring.boot.admin.turbine.web.TurbineController.getClusters()
+2018-07-07 14:15:52.353  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.get(java.lang.String)
+2018-07-07 14:15:52.354  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications],methods=[POST]}" onto public org.springframework.http.ResponseEntity<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.register(de.codecentric.boot.admin.model.Application)
+2018-07-07 14:15:52.354  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.unregister(java.lang.String)
+2018-07-07 14:15:52.354  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/applications],methods=[GET]}" onto public java.util.Collection<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.applications(java.lang.String)
+2018-07-07 14:15:52.357  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/journal],produces=[application/json]}" onto public java.util.Collection<de.codecentric.boot.admin.event.ClientApplicationEvent> de.codecentric.boot.admin.journal.web.JournalController.getJournal()
+2018-07-07 14:15:52.358  INFO 7216 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/journal],produces=[text/event-stream]}" onto public org.springframework.web.servlet.mvc.method.annotation.SseEmitter de.codecentric.boot.admin.journal.web.JournalController.getJournalEvents()
+2018-07-07 14:15:52.413  INFO 7216 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-07-07 14:15:52.454  WARN 7216 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2018-07-07 14:15:52.455  WARN 7216 --- [main] o.s.w.s.r.ResourceHttpRequestHandler     : Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2018-07-07 14:15:52.458  INFO 7216 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:15:52.459  INFO 7216 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:15:52.459  INFO 7216 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/all-modules.css] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:15:52.459  INFO 7216 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/all-modules.js] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:15:52.539  INFO 7216 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-07 14:15:53.088  INFO 7216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2018-07-07 14:15:53.088  INFO 7216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@42150951, []
+2018-07-07 14:15:53.273  INFO 7216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3085befb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ffc4195, org.springframework.security.web.header.HeaderWriterFilter@9c5d76b, org.springframework.security.web.authentication.logout.LogoutFilter@20a116a0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@325e03b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1d2d793d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e5c7cd5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@779ef5cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62264d4f, org.springframework.security.web.session.SessionManagementFilter@4d91d2da, org.springframework.security.web.access.ExceptionTranslationFilter@28fef9a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79b0956e]
+2018-07-07 14:15:53.281  INFO 7216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23ee92df, org.springframework.security.web.context.SecurityContextPersistenceFilter@237ee2e1, org.springframework.security.web.header.HeaderWriterFilter@68fc636a, org.springframework.security.web.authentication.logout.LogoutFilter@7d7f966f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@29c21acb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e00d737, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@656c0eae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a6a4595, org.springframework.security.web.session.SessionManagementFilter@18301763, org.springframework.security.web.access.ExceptionTranslationFilter@7be6dabb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c6fc278]
+2018-07-07 14:15:54.006  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.007  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/routes || /routes.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.008  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-07-07 14:15:54.011  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-07-07 14:15:54.011  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-07-07 14:15:54.011  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.012  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.012  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-07-07 14:15:54.013  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+2018-07-07 14:15:54.013  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+2018-07-07 14:15:54.014  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-07-07 14:15:54.015  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.017  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-07-07 14:15:54.017  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.018  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.019  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-07-07 14:15:54.019  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.019  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.019  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.019  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-07-07 14:15:54.020  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2018-07-07 14:15:54.020  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2018-07-07 14:15:54.020  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-07-07 14:15:54.022  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2018-07-07 14:15:54.023  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.024  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2018-07-07 14:15:54.024  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-07-07 14:15:54.025  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.025  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-07-07 14:15:54.026  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/jolokia/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-07-07 14:15:54.027  INFO 7216 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-07-07 14:15:54.756  INFO 7216 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2018-07-07 14:15:54.822  INFO 7216 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'updateTaskScheduler'
+2018-07-07 14:15:54.873  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/turbine/clusters],methods=[GET]}" onto public java.util.Map<java.lang.String, ?> spring.boot.admin.turbine.web.TurbineController.getClusters()
+2018-07-07 14:15:54.873  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.get(java.lang.String)
+2018-07-07 14:15:54.874  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications],methods=[POST]}" onto public org.springframework.http.ResponseEntity<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.register(de.codecentric.boot.admin.model.Application)
+2018-07-07 14:15:54.874  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> de.codecentric.boot.admin.registry.web.RegistryController.unregister(java.lang.String)
+2018-07-07 14:15:54.874  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/applications],methods=[GET]}" onto public java.util.Collection<de.codecentric.boot.admin.model.Application> de.codecentric.boot.admin.registry.web.RegistryController.applications(java.lang.String)
+2018-07-07 14:15:54.874  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/journal],produces=[application/json]}" onto public java.util.Collection<de.codecentric.boot.admin.event.ClientApplicationEvent> de.codecentric.boot.admin.journal.web.JournalController.getJournal()
+2018-07-07 14:15:54.874  INFO 7216 --- [main] d.c.boot.admin.web.PrefixHandlerMapping  : Mapped "{[/api/journal],produces=[text/event-stream]}" onto public org.springframework.web.servlet.mvc.method.annotation.SseEmitter de.codecentric.boot.admin.journal.web.JournalController.getJournalEvents()
+2018-07-07 14:15:55.103  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-07-07 14:15:55.113  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-07-07 14:15:55.114  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-07-07 14:15:55.115  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:15:55.116  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:15:55.116  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:15:55.117  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'zuulEndpoint' has been autodetected for JMX exposure
+2018-07-07 14:15:55.117  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-07-07 14:15:55.120  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-07-07 14:15:55.190  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2018-07-07 14:15:55.200  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+2018-07-07 14:15:55.207  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-07-07 14:15:55.219  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'zuulEndpoint': registering with JMX server as MBean [org.springframework.cloud.netflix.zuul:name=zuulEndpoint,type=RoutesEndpoint]
+2018-07-07 14:15:55.220  WARN 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with key 'zuulEndpoint' has been registered as an MBean but has no exposed attributes or operations
+2018-07-07 14:15:55.221  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6579c3d9,type=ConfigurationPropertiesRebinder]
+2018-07-07 14:15:55.226  INFO 7216 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2018-07-07 14:15:55.391  INFO 7216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: No access restrictor found, access to any MBean is allowed
+2018-07-07 14:15:55.398  INFO 7216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: jolokia:type=Config is already registered. Adding it with jolokia:type=Config,uuid=99acb989-36ea-4dae-b33c-13736ae4f56e, but you should revise your setup in order to either use a qualifier or ensure, that only a single agent gets registered (otherwise history functionality might not work)
+2018-07-07 14:15:55.398  INFO 7216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: Cannot register (legacy) MBean handler for config store with name jmx4perl:type=Config since it already exists. This is the case if another agent has been already started within the same JVM. The registration is skipped.
+2018-07-07 14:15:55.398  INFO 7216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : jolokia: Jolokia Discovery MBean registration is skipped because there is already one registered.
+2018-07-07 14:15:55.451  INFO 7216 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-07-07 14:15:55.458  INFO 7216 --- [main] o.s.c.n.turbine.SpringAggregatorFactory  : Could not find monitors: []
+2018-07-07 14:15:55.602  INFO 7216 --- [main] c.n.t.monitor.cluster.ClusterMonitor     : Registering event handler for cluster monitor: StaticListener_For_Aggregator
+2018-07-07 14:15:55.605  INFO 7216 --- [main] c.n.t.handler.TurbineDataDispatcher      : 
+
+Just added and starting handler tuple: StaticListener_For_Aggregator
+2018-07-07 14:15:55.605  INFO 7216 --- [main] c.n.t.monitor.cluster.ClusterMonitor     : All event handlers for cluster monitor: [StaticListener_For_Aggregator]
+2018-07-07 14:15:55.605  INFO 7216 --- [main] c.n.t.monitor.cluster.ClusterMonitor     : Starting up the cluster monitor for default_agg
+2018-07-07 14:15:55.610  INFO 7216 --- [main] c.n.t.discovery.InstanceObservable       : Starting InstanceObservable at frequency: 60000 millis
+2018-07-07 14:15:55.611  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:15:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:15:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:15:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:15:55.621  INFO 7216 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-07-07 14:15:55.686  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-07-07 14:15:55.747  INFO 7216 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-07-07 14:15:55.747  INFO 7216 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-07-07 14:15:55.879  INFO 7216 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-07-07 14:15:55.879  INFO 7216 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-07-07 14:15:56.069  INFO 7216 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-07-07 14:15:56.149  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-07-07 14:15:56.259  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-07-07 14:15:56.261  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-07-07 14:15:56.265  INFO 7216 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-07-07 14:15:56.267  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1530944156267 with initial instances count: 2
+2018-07-07 14:15:56.324  INFO 7216 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-admin with eureka with status UP
+2018-07-07 14:15:56.324  INFO 7216 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1530944156324, current=UP, previous=STARTING]
+2018-07-07 14:15:56.326  INFO 7216 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-ADMIN/OFPJZCBUT4SLVN7:service-admin:5000: registering service...
+2018-07-07 14:15:56.336  INFO 7216 --- [main] d.c.b.a.registry.ApplicationRegistry     : New Application Application [id=38f3fe26, name=BASIC-CONFIG, managementUrl=http://OFPJZCBUT4SLVN7:8888, healthUrl=http://OFPJZCBUT4SLVN7:8888/health, serviceUrl=http://OFPJZCBUT4SLVN7:8888] registered 
+2018-07-07 14:15:56.344  INFO 7216 --- [main] d.c.b.a.registry.ApplicationRegistry     : New Application Application [id=e0f04612, name=SERVICE-ADMIN, managementUrl=http://OFPJZCBUT4SLVN7:5000, healthUrl=http://OFPJZCBUT4SLVN7:5000/health, serviceUrl=http://OFPJZCBUT4SLVN7:5000] registered 
+2018-07-07 14:15:56.397  INFO 7216 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-07-07 14:15:56.405  INFO 7216 --- [main] ration$HystrixMetricsPollerConfiguration : Starting poller
+2018-07-07 14:15:56.412  INFO 7216 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-ADMIN/OFPJZCBUT4SLVN7:service-admin:5000 - registration status: 204
+2018-07-07 14:15:56.487  INFO 7216 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 5000 (http)
+2018-07-07 14:15:56.488  INFO 7216 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 5000
+2018-07-07 14:15:56.494  INFO 7216 --- [main] com.notingtodo.BasicAdminApplication     : Started BasicAdminApplication in 11.428 seconds (JVM running for 11.833)
+2018-07-07 14:15:56.702  INFO 7216 --- [http-nio-5000-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-07 14:15:56.702  INFO 7216 --- [http-nio-5000-exec-9] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-07 14:15:56.734  INFO 7216 --- [http-nio-5000-exec-9] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-07-07 14:15:56.752  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/turbine/stream/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/health/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/env/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/metrics/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/dump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/jolokia/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/info/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/configprops/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/trace/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/logfile/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/refresh/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/flyway/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.753  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/liquibase/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/heapdump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/loggers/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/auditevents/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/38f3fe26/hystrix.stream/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/health/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/env/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/metrics/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/dump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/jolokia/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/info/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/configprops/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/trace/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/logfile/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.757  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/refresh/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.758  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/flyway/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.758  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/liquibase/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.758  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/heapdump/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.758  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/loggers/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.758  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/auditevents/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.758  INFO 7216 --- [http-nio-5000-exec-9] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/applications/e0f04612/hystrix.stream/**] onto handler of type [class de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController]
+2018-07-07 14:15:56.783  INFO 7216 --- [http-nio-5000-exec-9] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:15:56.943  INFO 7216 --- [http-nio-5000-exec-9] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:16:55.612  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:16:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:16:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:16:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:17:55.612  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:17:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:17:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:17:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:18:55.612  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:18:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:18:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:18:55.612  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:19:55.613  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:19:55.613  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:19:55.613  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:19:55.613  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:20:55.613  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:20:55.613  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:20:55.613  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:20:55.613  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:20:56.157  INFO 7216 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-07-07 14:21:16.686  INFO 7216 --- [http-nio-5000-exec-8] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2018-07-07 14:21:16.938  INFO 7216 --- [http-nio-5000-exec-8] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=service-admin, profiles=[default], label=null, version=null, state=null
+2018-07-07 14:21:55.614  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:21:55.614  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:21:55.614  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:21:55.615  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
+2018-07-07 14:22:55.614  INFO 7216 --- [Timer-0] o.s.c.n.t.CommonsInstanceDiscovery       : No apps configured, returning an empty instance list
+2018-07-07 14:22:55.614  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Retrieved hosts from InstanceDiscovery: 0
+2018-07-07 14:22:55.614  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Found hosts that have been previously terminated: 0
+2018-07-07 14:22:55.614  INFO 7216 --- [Timer-0] c.n.t.discovery.InstanceObservable       : Hosts up:0, hosts down: 0
