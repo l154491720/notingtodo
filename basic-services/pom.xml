@@ -26,19 +26,19 @@
 
 	<modules>
 		<!-- 基础配置服务  -->
-		<module>basic-config</module>
+		<!--<module>basic-config</module>-->
 		<!-- 注册中心服务  -->
-		<module>basic-discovery</module>
+		<!--<module>basic-discovery</module>-->
 		<!--<module>ui</module>-->
 		<!--<module>person</module>-->
 		<!--<module>some</module>-->
 		<!--<module>monitor</module>-->
 		<!-- 授权服务  -->
-		<module>basic-auth</module>
+		<!--<module>basic-auth</module>-->
 		<!-- 链路追踪服务  -->
-		<module>basic-zipkin</module>
+		<!--<module>basic-zipkin</module>-->
 		<!-- 基础网关服务  -->
-		<module>basic-gateway</module>
+		<!--<module>basic-gateway</module>-->
 		<!-- 基础公用组件 -->
 		<!--<module>basic-common</module>-->
 	</modules>
