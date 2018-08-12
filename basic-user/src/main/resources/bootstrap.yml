@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: basic-user
+  cloud:
+      config:
+        enabled: true
+        discovery:
+          enabled: true
+          service-id: BASIC-CONFIG   #调用配置服务的配置
+  profiles:
+   active: pro #不同环境下的参数切换配置
+

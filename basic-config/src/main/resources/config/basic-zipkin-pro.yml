@@ -1,0 +1,10 @@
+server:
+  port: 9411
+eureka:
+  instance:
+    non-secure-port: ${server.port:9411} #3 非SSL端口，若环境变量中server.port有值，则使用环境变量值，没有则使用8080
+    metadata-map:
+      insta: ${spring.application.name}:${random.value} #4 配置在Eureka Server的实例ID
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/ #5 Eureka客户端设置Eureka Server的地址
