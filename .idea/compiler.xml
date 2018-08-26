@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="basic-admin" />
+        <module name="basic-auth" />
+        <module name="basic-common" />
+        <module name="basic-config" />
+        <module name="basic-discovery" />
+        <module name="basic-gateway" />
+        <module name="basic-user" />
+        <module name="basic-zipkin" />
+        <module name="monitor" />
+        <module name="person" />
+        <module name="some" />
+        <module name="ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="basic-admin" target="1.8" />
+      <module name="basic-auth" target="1.8" />
+      <module name="basic-common" target="1.5" />
+      <module name="basic-config" target="1.8" />
+      <module name="basic-discovery" target="1.8" />
+      <module name="basic-gateway" target="1.8" />
+      <module name="basic-services" target="1.8" />
+      <module name="basic-user" target="1.8" />
+      <module name="basic-zipkin" target="1.8" />
+      <module name="monitor" target="1.8" />
+      <module name="person" target="1.8" />
+      <module name="some" target="1.8" />
+      <module name="ui" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
