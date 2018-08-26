@@ -12,7 +12,7 @@ eureka:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.59.103:3306/sys-user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://117.30.224.251:3306/sys-user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&useSSL=false
     username: root
     password: 123456
   jpa:
@@ -27,7 +27,7 @@ spring:
       percentage: 1.0 # 100%的概率将链路上的数据上传给Zipkin Server, 在默认情况下，该值为 0.1 ，开发调试期间设置为收集全部跟踪信息
 
   rabbitmq:
-    host: 192.168.59.103
+    host: 117.30.224.251
     port: 5672
     username: guest
     password: guest

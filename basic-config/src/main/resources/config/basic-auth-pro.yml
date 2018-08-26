@@ -6,7 +6,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://192.168.59.103:3306/sys-user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://117.30.224.251:3306/sys-user?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&autoReconnect=true&useSSL=false
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
